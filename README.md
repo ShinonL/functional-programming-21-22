@@ -1,6 +1,11 @@
-# functional-programming-21-22
-Functional Programming Laboratories
+# Functional Programming Laboratories
+Student: Laura Nadu 
+Group: 30431
 
 ## Week 1
+- Install ELM
+- Write functions in ELM
 
-- TODO: description week1
+## Week 2
+- Install IntelliJ -> I chose Visual Studio Code
+- Vrite modules
