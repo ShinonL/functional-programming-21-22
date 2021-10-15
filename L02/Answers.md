@@ -110,7 +110,7 @@ The built in type with cardinality 1 is **()**.
 ### <span style="color: #3f9100"> E 2.8.2 </span>
 
     type alias DicePair = { die_1: Die, die_2: Die }
-    type DicePair_Def = Dice { die_1: Die, die_2: Die }
+    type DicePair_Def = DicePair_Def Die Die
 
 ### <span style="color: #3f9100"> E 2.8.3 </span>
 
