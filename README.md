@@ -8,4 +8,4 @@ Group: 30431
 
 ## Week 2
 - Install IntelliJ -> I chose Visual Studio Code
-- Vrite modules
+- Write modules
