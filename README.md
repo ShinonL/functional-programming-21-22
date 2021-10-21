@@ -9,3 +9,9 @@ Group: 30431
 ## Week 2
 - Install IntelliJ -> I chose Visual Studio Code
 - Write modules
+
+## Week 3
+- Learn about lists and error handling
+
+## Week 4
+In progress..
