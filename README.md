@@ -21,4 +21,6 @@ Group: 30431
 
 ## Week 5 - DONE
 
+- Unit testing
+
 ## Week 6 - DONE
