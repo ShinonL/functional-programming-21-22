@@ -24,3 +24,5 @@ Group: 30431
 - Unit testing
 
 ## Week 6 - DONE
+
+- HTML
