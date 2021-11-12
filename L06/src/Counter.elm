@@ -27,15 +27,10 @@ view : Model -> Html Msg
 view model =
   let
     bigFont = style "font-size" "20pt"
-    redFont = style "color" "red"
-    applyStyle = 
-      if model <= -8 || model >= 8 then
-        bigFont :: [redFont]
-      else [bigFont]
   in
     div []
-      [ button [ bigFont, onClick Increment, disabled (model >= 10) ] [ text "+" ]
-      , div ( applyStyle ) [ text (String.fromInt model) ]
-      , button [ bigFont, onClick Decrement, disabled (model <= -10) ] [ text "-" ]
+      [ button [ bigFont, onClick Increment ] [ text "+" ]
+      , div [ bigFont ] [ text (String.fromInt model) ]
+      , button [ bigFont, onClick Decrement ] [ text "-" ]
       ]
 
