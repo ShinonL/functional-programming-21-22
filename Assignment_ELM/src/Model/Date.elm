@@ -46,6 +46,9 @@ The month fields are handled as follows:
     monthsBetween (full 2020 Jan) (onlyYear 2021) --> Nothing
 
     monthsBetween (full 2020 Dec) (full 2021 Jan) --> Just 1
+
+    monthsBetween (onlyYear 2020) (onlyYear 2021) --> Just 12
+    monthsBetween (onlyYear 2020) (onlyYear 2022) --> Just 24
 ```
 
 -}
@@ -58,7 +61,8 @@ monthsBetween dA dB =
             abs <| monthToInt m1 - monthToInt m2 + 12 * (date1.year - date2.year)
     in
     case (date1.month, date2.month) of
-        (Just m1, Just m2) -> Just <| computeMonths m1 m2
+        (Just m1, Just m2) -> Just <| computeMonths m1 m2 
+        (Nothing, Nothing) -> Just <| abs <| 12 * (date1.year - date2.year)
         (_, _) -> Nothing
 
 

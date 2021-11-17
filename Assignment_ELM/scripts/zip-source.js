@@ -5,7 +5,7 @@ import * as readline from 'node:readline';
 
 
 const cmd = process.platform === "win32" ? "npx.cmd elm-test --report json" : "npx elm-test --report json";
-const opts = process.platform === "win32" ? {shell: true} : {};
+const opts = process.platform === "linux" ? {shell: true} : {};
 
 const testResult = child_process.spawnSync(cmd, opts);
 
@@ -14,7 +14,7 @@ if (!fs.existsSync("./logs")) {
 }
 
 fs.writeFileSync("./logs/test-logs.json", testResult.stdout);
-
+ 
 if (testResult.status !== 0 || testResult.error) {
     const rl = readline.createInterface({input: process.stdin, output: process.stdout});
 
