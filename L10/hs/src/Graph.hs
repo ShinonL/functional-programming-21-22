@@ -2,6 +2,8 @@
 module Graph where
 import Distribution.Simple.Utils (safeHead)
 import Data.Maybe (fromMaybe)
+import Data.List as L
+import Data.Function
 
 g = [
   ("a", "b"), ("a", "c"), ("a", "d"),
@@ -31,10 +33,10 @@ newtype TupleGraph a = TupleGraph [(a, a)]
 newtype NeighborListGraph a = NeighborListGraph [(a, [a])]
 
 instance Graph TupleGraph where
-  neighbors a (TupleGraph g) = undefined 
+  neighbors a (TupleGraph g) = L.map snd $ L.filter ((== a) . fst) g
 
 instance Graph NeighborListGraph where
-  neighbors a (NeighborListGraph g) = undefined 
+  neighbors a (NeighborListGraph g) = snd $ L.head $ L.filter ((== a) . fst) g
 
 
 -- >>> neighbors "a" nlg
@@ -56,6 +58,3 @@ bf start g = undefined
 -}
 df :: (Graph g, Eq a) => a -> g a -> [a]
 df start g = undefined
-
-
-
