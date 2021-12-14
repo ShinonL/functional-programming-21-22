@@ -26,3 +26,11 @@ Group: 30431
 ## Week 6 - DONE
 
 - HTML
+
+## Week 7 - DONE
+
+## Week 8 - DONE
+
+## Week 9 - DONE
+
+## Week 10 - DONE
